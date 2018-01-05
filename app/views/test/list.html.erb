@@ -1,0 +1,40 @@
+
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>FirstName</th>
+			<th>LastName</th>
+			<th>Email</th>
+			<th>Phone Number</th>
+			<th>Address</th>
+			<th>Branch</th>
+			<th>Actions</th>
+		</tr>
+
+		<% @t.each do |t| %>
+	
+			<tr>
+				<td><%= t.id%></td>
+				<td><%= t.fname %></td>
+				<td><%= t.lname %></td>
+				<td><%= t.email %></td>
+				<td><%= t.phno %></td>
+				<td><%= t.address %></td>
+				<td><%= t.branch %></td>
+				
+				<td>  
+					 <%= link_to "edit" , edit_test_path(t) %> 
+					 <%= link_to "show" , test_path(t) %> 
+ 					 <%= link_to 'delete', test_path(t) ,method: :delete, data: {confirm: "Are you sure to  delete #{t.fname}?"} %></td>
+			</tr>
+	
+		<% end -%>
+
+	</table>
+
+	<tr><td><%= link_to '<button type="button" , style="color:black;" >Register</button>'.html_safe,root_path%></td>
+	</tr>
+
+
+
+

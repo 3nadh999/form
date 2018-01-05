@@ -1,0 +1,31 @@
+			<tr>	
+				<td><%= f.label "FULLNAME" %>	</td>
+				<td> <%= f.text_field :fname %>   </td>
+			</tr>
+			<tr>	
+				<td><%= f.label "LASTNAME" %>	</td>
+				<td> <%= f.text_field :lname %>   </td>
+			</tr>
+
+			<tr>
+				<td><%= f.label "EMAIL" %></td>
+				<td><%= f.email_field :email %></td>
+			</tr>
+
+			<tr>
+				<td><%= f.label "PHONE NUMBER" %></td>
+				<td><%= f.number_field :phno %></td>
+			</tr>
+
+			<tr>
+				<td><%= f.label "BRANCH" %></td>
+				<td><%= f.text_field :branch %></td>
+			</tr>
+
+			<tr>
+				<td><%= f.label "ADDRESS" %></td>
+				<td><%= f.text_field :address %></td>
+			</tr>
+			<tr>	
+				<td></td><td><%= f.submit %></td>
+			</tr> 
